@@ -28,8 +28,8 @@ class ChemicalElementSpec extends FlatSpec with Matchers {
   }
 
   "A Chemical Element" should "have a correct critical point" in {
-    val c = new ChemicalElement("test", "t", 1, 1.0,"", Map(), Map("Critical point" -> List("1K, 1kPa")), Map(), Map())
-    c.triplePoint.get should be (K(1), kPa(1))
+    val c = new ChemicalElement("test", "t", 1, 1.0,"", Map(), Map("Triple point" -> List("1K, 1kPa")), Map(), Map())
+    c.triplePoint.get should be (K, kPa)
   }
 
 

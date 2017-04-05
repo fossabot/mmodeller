@@ -2,10 +2,10 @@ package ch.uzh.mmodeller.atomic
 
 import ch.uzh.mmodeller.MaterialState
 import ch.uzh.mmodeller.MaterialState.MaterialState
-import ch.uzh.utils.UnitParser
 import ch.uzh.utils.Units.{Density, Temperature}
 import ch.uzh.utils.units.Temperature._
 import ch.uzh.utils.Units._
+import ch.uzh.utils.units.{Pressure, Temperature}
 
 import scala.collection.mutable
 
@@ -82,11 +82,15 @@ class ChemicalElement(name: String,
   }
 
   override def triplePoint: Option[(Temperature, Pressure)] = physicalParameters.get("Triple point") match {
-    case Some(tp) => None
-//      val r = UnitParser.parse(tp.head.replaceAll(findBrackets, ""), ",")
-//      val t = r.filter(e => e._1.isInstanceOf[Temperature]).head._2.asInstanceOf[Temperature]
-//      val p = r.filter(e => e._1.isInstanceOf[Pressure]).head._2.asInstanceOf[Pressure]
-//      Some(t,p)
+    case Some(tp) =>
+      val r = tp.head.replaceAll(findBrackets, "").split(",")
+      val t = Temperature.spoon(r(0))
+      val p = Pressure.spoon(r(1))
+      if (t.isDefined && p.isDefined) {
+        Some(t.get.asInstanceOf[Temperature], p.get.asInstanceOf[Pressure])
+      } else {
+        None
+      }
     case None => None
   }
 
