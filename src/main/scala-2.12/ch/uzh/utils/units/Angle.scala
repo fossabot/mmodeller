@@ -1,11 +1,11 @@
 package ch.uzh.utils.units
 
-import ch.uzh.utils.Units.{One, rad}
+import ch.uzh.utils.Units.{One, PlaneAngle, rad}
 import ch.uzh.utils.units.Prefix._
 
 import scala.math.Pi
 
-object Angle {
+object Angle extends Spoon {
 
   val rad = new rad()
   val radian: rad = rad
@@ -24,4 +24,15 @@ object Angle {
   val turns = new rad(Tau)
   val deg = new rad(Tau/360.0)
 
+  override def spoon(text: String): Option[Any] = {
+    val bs = extract(text)
+    if (bs.isDefined) {
+      bs.get._1 match {
+        case a: PlaneAngle => Some(a * bs.get._2)
+        case _ => None
+      }
+    } else {
+      None
+    }
+  }
 }

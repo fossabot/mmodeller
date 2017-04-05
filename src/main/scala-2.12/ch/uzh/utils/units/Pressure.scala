@@ -1,9 +1,9 @@
 package ch.uzh.utils.units
 
-import ch.uzh.utils.Units.Pa
+import ch.uzh.utils.Units.{Pa, Pressure}
 import ch.uzh.utils.units.Prefix._
 
-object Pressure {
+object Pressure extends Spoon {
 
   val Pa = new Pa()
   val Pascal = Pa
@@ -20,4 +20,16 @@ object Pressure {
   val bar = Pa(1e5)
   val mbar = hPa
   val atm = mbar(1013.25)
+
+  override def spoon(text: String): Option[Any] = {
+    val bs = extract(text)
+    if (bs.isDefined) {
+      bs.get._1 match {
+        case p: Pressure => Some(p * bs.get._2)
+        case _ => None
+      }
+    } else {
+      None
+    }
+  }
 }

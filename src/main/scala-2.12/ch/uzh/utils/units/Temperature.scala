@@ -3,7 +3,7 @@ package ch.uzh.utils.units
 import ch.uzh.utils.Units.{K, Temperature}
 import ch.uzh.utils.units.Prefix._
 
-object Temperature {
+object Temperature extends Spoon {
 
   val K = new K()
   val Kelvin = K
@@ -22,4 +22,16 @@ object Temperature {
 
   def fromCelsius(value: Double): Temperature = new Temperature(value + zeroCelsiusInKelvin)
   def toCelsius(temperature: Temperature): Double = temperature.value - zeroCelsiusInKelvin
+
+  override def spoon(text: String): Option[Any] = {
+    val bs = extract(text)
+    if (bs.isDefined) {
+      bs.get._1 match {
+        case t: Temperature => Some(t * bs.get._2)
+        case _ => None
+      }
+    } else {
+      None
+    }
+  }
 }

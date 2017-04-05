@@ -1,7 +1,5 @@
 package ch.uzh.utils
 
-import org.scalactic.TripleEqualsSupport.Spread
-
 object Exponents {
 
   type -[S1 <: Exp, S2 <: Exp] = S1#Sub[S2]

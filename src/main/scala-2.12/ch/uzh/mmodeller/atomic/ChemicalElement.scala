@@ -2,12 +2,12 @@ package ch.uzh.mmodeller.atomic
 
 import ch.uzh.mmodeller.MaterialState
 import ch.uzh.mmodeller.MaterialState.MaterialState
+import ch.uzh.utils.UnitParser
 import ch.uzh.utils.Units.{Density, Temperature}
-
-import scala.collection.mutable
-
+import ch.uzh.utils.units.Temperature._
 import ch.uzh.utils.Units._
 
+import scala.collection.mutable
 
 case class ChemicalElementException(message:String)  extends Exception
 
@@ -21,6 +21,8 @@ class ChemicalElement(name: String,
                       atomicParameters: Map[String, String],
                       miscParameters: Map[String, String]
                      ) extends Atom(number, atomicWeight) with GeneralProperties {
+
+  private val findBrackets = "\\([^)]*\\)"
 
   // General Atomic Properties
   override def standardAtomicWeight = atomicWeight
@@ -41,34 +43,53 @@ class ChemicalElement(name: String,
     case None => MaterialState.Unknown
   }
 
-  override def densities = ???
-//  {
-//    val densitiesMap = physicalParameters.filterKeys(k => k.toLowerCase.contains("density"))
-//    var result = new mutable.MutableList[(Option[String], Temperature, Density, Option[MaterialState])]
-//    for (desc <- densitiesMap.keys) {
-//      val value = densitiesMap.get(desc)
-//      desc match {
-//        case p if p.toLowerCase == "density" => {
-//          for (line <- value) {
-//              result += ()
-//          }
-//        }
-//      }
-//    }
-//    result.toList
-//  }
+  override def densities = {
+    val densitiesMap = physicalParameters.filterKeys(k => k.toLowerCase.contains("density"))
+    var result = new mutable.MutableList[(Option[String], Temperature, Density, Option[MaterialState])]
+    for (desc <- densitiesMap.keys) {
+      val value = densitiesMap.get(desc)
+      desc match {
+        case p if p.toLowerCase == "density" => {
+          for (line <- value) {
+              //result += ()
+          }
+        }
+      }
+    }
+    result.toList
+  }
 
   override def liquidDensityNearMeltingPoint = ???
 
-  private val regexMp = "^bar(.*)baz$".r
-  override def meltingPoint = ???
-//  physicalParameters.get("Melting point") match {
-//    case Some(mp) => (mp.collect{ case regexMp(v) => v.trim }.head.toDouble).to[K]
-//    case None => None
-//  }
+  private def extractTemperature(mp: List[String]) = {
+    val regexT = """(\d+)\s*K""".r
+    val grouped = regexT findAllIn mp.head.replaceAll(findBrackets, "")
+    if (grouped.nonEmpty) {
+      Some(K(grouped.next().replaceAll("K", "").trim.toDouble))
+    } else {
+      None
+    }
+  }
 
-  override def boilingPoint = ???
-  override def triplePoint = ???
+  override def meltingPoint: Option[Temperature] = physicalParameters.get("Melting point") match {
+    case Some(mp) => extractTemperature(mp)
+    case None => None
+  }
+
+  override def boilingPoint: Option[Temperature] = physicalParameters.get("Boiling point") match {
+    case Some(bp) => extractTemperature(bp)
+    case None => None
+  }
+
+  override def triplePoint: Option[(Temperature, Pressure)] = physicalParameters.get("Triple point") match {
+    case Some(tp) => None
+//      val r = UnitParser.parse(tp.head.replaceAll(findBrackets, ""), ",")
+//      val t = r.filter(e => e._1.isInstanceOf[Temperature]).head._2.asInstanceOf[Temperature]
+//      val p = r.filter(e => e._1.isInstanceOf[Pressure]).head._2.asInstanceOf[Pressure]
+//      Some(t,p)
+    case None => None
+  }
+
   override def criticalPoint = ???
   override def heatOfFusion = ???
   override def heatOfVaporization = ???

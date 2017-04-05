@@ -10,10 +10,8 @@ lazy val root = (project in file(".")).
 
 libraryDependencies ++= Seq(
   "org.scalatest" % "scalatest_2.12" % "3.0.1"
-//  "org.typelevel"  %% "squants"  % "1.2.0"
 )
 
 lazy val defaultSettings = Defaults.coreDefaultSettings ++ Seq(
   resolvers += "Typesafe Repo" at "http://repo.typesafe.com/typesafe/releases/"
-//  resolvers += "Sonatype OSS" at "https://oss.sonatype.org/content/repositories/releases"
 )

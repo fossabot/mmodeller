@@ -1,9 +1,9 @@
 package ch.uzh.utils.units
 
-import ch.uzh.utils.Units.{Ar, kat, mol}
+import ch.uzh.utils.Units.{AmountOfSubstance, CatalyticActivity, kat, mol}
 import ch.uzh.utils.units.Prefix._
 
-object Chemical {
+object Chemical extends Spoon {
 
   val mol  = new mol()
   val Tmol= mol(tera)
@@ -24,5 +24,18 @@ object Chemical {
   val ukat = kat(micro)
   val nkat = kat(nano)
   val pkat= kat(pico)
+
+  override def spoon(text: String): Option[Any] = {
+    val bs = extract(text)
+    if (bs.isDefined) {
+      bs.get._1 match {
+        case a: AmountOfSubstance => Some(a * bs.get._2)
+        case k: CatalyticActivity => Some(k * bs.get._2)
+        case _ => None
+      }
+    } else {
+      None
+    }
+  }
 
 }

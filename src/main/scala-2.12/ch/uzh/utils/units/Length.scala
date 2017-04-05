@@ -1,9 +1,9 @@
 package ch.uzh.utils.units
 
-import ch.uzh.utils.Units.m
+import ch.uzh.utils.Units.{Length, m}
 import ch.uzh.utils.units.Prefix._
 
-object Length {
+object Length extends Spoon {
 
   val m = new m()
   val meter: m = m
@@ -18,4 +18,15 @@ object Length {
   val nm = m(nano)
   val pm = m(pico)
 
+  override def spoon(text: String): Option[Any] = {
+    val bs = extract(text)
+    if (bs.isDefined) {
+      bs.get._1 match {
+        case l: Length => Some(l * bs.get._2)
+        case _ => None
+      }
+    } else {
+      None
+    }
+  }
 }

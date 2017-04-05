@@ -1,9 +1,9 @@
 package ch.uzh.utils.units
 
-import ch.uzh.utils.Units.{Bq, Gy, Sv}
+import ch.uzh.utils.Units.{AbsorbedDose, Bq, DoseEquivalent, Gy, IonizingRadiationActivity, Sv}
 import ch.uzh.utils.units.Prefix._
 
-object Radiation {
+object Radiation extends Spoon {
 
   val Gy = new Gy()
   val Gray = Gy
@@ -38,4 +38,17 @@ object Radiation {
   val nBq = Bq(nano)
   val pBq = Bq(pico)
 
+  override def spoon(text: String): Option[Any] = {
+    val bs = extract(text)
+    if (bs.isDefined) {
+      bs.get._1 match {
+        case a: AbsorbedDose => Some(a * bs.get._2)
+        case d: DoseEquivalent => Some(d * bs.get._2)
+        case i: IonizingRadiationActivity => Some(i * bs.get._2)
+        case _ => None
+      }
+    } else {
+      None
+    }
+  }
 }

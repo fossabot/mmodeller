@@ -1,9 +1,9 @@
 package ch.uzh.utils.units
 
-import ch.uzh.utils.Units.s
+import ch.uzh.utils.Units.{Time, s}
 import ch.uzh.utils.units.Prefix._
 
-object Time {
+object Time extends Spoon {
 
   val s = new s()
   val second: s = s
@@ -23,4 +23,16 @@ object Time {
   val h = min(60)
   val day = h(24)
   val year = day(365.25)
+
+  override def spoon(text: String): Option[Any] = {
+    val bs = extract(text)
+    if (bs.isDefined) {
+      bs.get._1 match {
+        case t: Time => Some(t * bs.get._2)
+        case _ => None
+      }
+    } else {
+      None
+    }
+  }
 }

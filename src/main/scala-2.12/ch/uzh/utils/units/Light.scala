@@ -1,9 +1,9 @@
 package ch.uzh.utils.units
 
-import ch.uzh.utils.Units.{cd, lm, lx}
+import ch.uzh.utils.Units.{Illuminance, LuminousFlux, LuminousIntensity, cd, lm, lx}
 import ch.uzh.utils.units.Prefix._
 
-object Light {
+object Light extends Spoon {
 
   val lm = new lm()
   val lumen: lm = lm
@@ -38,4 +38,17 @@ object Light {
   val ncd = cd(nano)
   val pcd = cd(pico)
 
+  override def spoon(text: String): Option[Any] = {
+    val bs = extract(text)
+    if (bs.isDefined) {
+      bs.get._1 match {
+        case l: LuminousFlux => Some(l * bs.get._2)
+        case i: Illuminance => Some(i * bs.get._2)
+        case l: LuminousIntensity => Some(l * bs.get._2)
+        case _ => None
+      }
+    } else {
+      None
+    }
+  }
 }

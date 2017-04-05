@@ -1,9 +1,9 @@
 package ch.uzh.utils.units
 
-import ch.uzh.utils.Units.{A, C, F, J, N, Ohm, S, V, W}
+import ch.uzh.utils.Units.{A, C, Capacitance, Conductance, Current, ElectricCharge, ElectricResistance, Energy, F, Force, J, N, Ohm, Power, S, V, Voltage, W}
 import ch.uzh.utils.units.Prefix._
 
-object Energy {
+object Energy extends Spoon {
 
   val N = new N()
   val Newton = N
@@ -115,5 +115,25 @@ object Energy {
 
   val ElectronVolt = J(1.60217733e-19)
   val eV = ElectronVolt
+
+  override def spoon(text: String): Option[Any] = {
+    val bs = extract(text)
+    if (bs.isDefined) {
+      bs.get._1 match {
+        case f: Force => Some(f * bs.get._2)
+        case c: Current => Some(c * bs.get._2)
+        case v: Voltage => Some(v * bs.get._2)
+        case e: Energy => Some(e * bs.get._2)
+        case p: Power => Some(p * bs.get._2)
+        case e: ElectricCharge => Some(e * bs.get._2)
+        case c: Conductance => Some(c * bs.get._2)
+        case c: Capacitance => Some(c * bs.get._2)
+        case e: ElectricResistance => Some(e * bs.get._2)
+        case _ => None
+      }
+    } else {
+      None
+    }
+  }
 
 }

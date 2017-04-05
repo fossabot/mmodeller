@@ -1,9 +1,9 @@
 package ch.uzh.utils.units
 
-import ch.uzh.utils.Units.kg
+import ch.uzh.utils.Units.{Mass, kg}
 import ch.uzh.utils.units.Prefix._
 
-object Mass {
+object Mass extends Spoon {
 
   val g = new kg(1e-3)
   val gram: kg = g
@@ -17,4 +17,16 @@ object Mass {
   val pg = g(pico)
 
   val tonne = kg(1000)
+
+  override def spoon(text: String): Option[Any] = {
+    val bs = extract(text)
+    if (bs.isDefined) {
+      bs.get._1 match {
+        case m: Mass => Some(m * bs.get._2)
+        case _ => None
+      }
+    } else {
+      None
+    }
+  }
 }

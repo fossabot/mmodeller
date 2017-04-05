@@ -2,7 +2,10 @@ package ch.uzh.mmodeller.utils
 
 import ch.uzh.utils.Exponents._
 import ch.uzh.utils.Units._
+import ch.uzh.utils.units.{Angle, Chemical}
+import ch.uzh.utils.units.Angle._
 import ch.uzh.utils.units.Area._
+import ch.uzh.utils.units.Chemical._
 import ch.uzh.utils.units.Pressure._
 import ch.uzh.utils.units.Length._
 import ch.uzh.utils.units.Temperature._
@@ -104,6 +107,11 @@ class UnitsSpec extends FlatSpec with Matchers {
     val distance = 30 * m
     val humanRemainingLifeTime = distance / (velociraptor - human)
     humanRemainingLifeTime should be (s(1.35) +- s(0.01))
+  }
+
+  "Inferring a unit from a string" should "be a thing we can do" in {
+    Angle.spoon("1 krad").get should be (krad)
+    Chemical.spoon("1000 mmol").get should be (mol)
   }
 
 }

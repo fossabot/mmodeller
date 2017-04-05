@@ -30,12 +30,12 @@ object Units {
     type CD  = CD_
 
     type This = Quantity[M, KG, S, A, K, Mol, CD]
-    def +(m : This): Quantity[M_, KG_, S_, A_, K_, Mol_, CD_] = Quantity[M, KG, S, A, K, Mol, CD](value + m.value)
-    def -(m : This): Quantity[M_, KG_, S_, A_, K_, Mol_, CD_] = Quantity[M, KG, S, A, K, Mol, CD](value - m.value)
-    def *[M2 <: Exp, KG2 <: Exp, S2 <: Exp, A2 <: Exp, K2 <: Exp, Mol2 <: Exp, CD2 <: Exp](m : Quantity[M2, KG2, S2, A2, K2, Mol2, CD2]): Quantity[+[M_, M2], +[KG_, KG2], +[S_, S2], +[A_, A2], +[K_, K2], +[Mol_, Mol2], +[CD_, CD2]] = Quantity[M + M2, KG + KG2, S + S2, A + A2, K + K2, Mol + Mol2, CD + CD2](value * m.value)
-    def /[M2 <: Exp, KG2 <: Exp, S2 <: Exp, A2 <: Exp, K2 <: Exp, Mol2 <: Exp, CD2 <: Exp](m : Quantity[M2, KG2, S2, A2, K2, Mol2, CD2]): Quantity[-[M_, M2], -[KG_, KG2], -[S_, S2], -[A_, A2], -[K_, K2], -[Mol_, Mol2], -[CD_, CD2]] = Quantity[M - M2, KG - KG2, S - S2, A - A2, K - K2, Mol - Mol2, CD - CD2](value / m.value)
+    def +(m : This) = Quantity[M, KG, S, A, K, Mol, CD](value + m.value)
+    def -(m : This) = Quantity[M, KG, S, A, K, Mol, CD](value - m.value)
+    def *[M2 <: Exp, KG2 <: Exp, S2 <: Exp, A2 <: Exp, K2 <: Exp, Mol2 <: Exp, CD2 <: Exp](m : Quantity[M2, KG2, S2, A2, K2, Mol2, CD2]) = Quantity[M + M2, KG + KG2, S + S2, A + A2, K + K2, Mol + Mol2, CD + CD2](value * m.value)
+    def /[M2 <: Exp, KG2 <: Exp, S2 <: Exp, A2 <: Exp, K2 <: Exp, Mol2 <: Exp, CD2 <: Exp](m : Quantity[M2, KG2, S2, A2, K2, Mol2, CD2]) = Quantity[M - M2, KG - KG2, S - S2, A - A2, K - K2, Mol - Mol2, CD - CD2](value / m.value)
 
-    def apply(v : Double): Quantity[M_, KG_, S_, A_, K_, Mol_, CD_] = Quantity[M, KG, S, A, K, Mol, CD](v * value)
+    def apply(v : Double) = Quantity[M, KG, S, A, K, Mol, CD](v * value)
 
     override def toString: String = "" + value
 
@@ -50,6 +50,7 @@ object Units {
         throw new IllegalArgumentException(tolerance.toString + " passed to +- was zero or negative. Must be a positive non-zero number.")
       QuantitySpread(this, tolerance)
     }
+
     final case class QuantitySpread(pivot: Quantity[M_, KG_, S_, A_, K_, Mol_, CD_], tolerance: Quantity[M_, KG_, S_, A_, K_, Mol_, CD_]) {
       def isWithin(n: This): Boolean = {
         n.value > (pivot - tolerance).value && n.value <= (pivot + tolerance).value
@@ -58,7 +59,7 @@ object Units {
     }
   }
 
-  implicit def measure(v : Double): Quantity[__, __, __, __, __, __, __] = Quantity[__, __, __, __, __, __, __](v)
+  implicit def measure(v : Double) = Quantity[__, __, __, __, __, __, __](v)
 
   implicit def unitlessQuantityToDouble(q: Quantity[__, __, __, __, __, __, __]): Double = q.value
 
@@ -148,5 +149,4 @@ object Units {
   type AbsorbedDoseRate               = Gy/s
   type RadiantIntensity               = W/sr
   type Radiance                       = W/m2~sr
-
 }

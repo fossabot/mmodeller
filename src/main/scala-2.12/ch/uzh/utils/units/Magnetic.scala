@@ -1,9 +1,9 @@
 package ch.uzh.utils.units
 
-import ch.uzh.utils.Units.{T, Wb}
+import ch.uzh.utils.Units.{MagneticFlux, MagneticFluxDensity, T, Wb}
 import ch.uzh.utils.units.Prefix._
 
-object Magnetic {
+object Magnetic extends Spoon {
 
   val Wb = new Wb()
   val Weber = Wb
@@ -27,4 +27,16 @@ object Magnetic {
   val nT = T(nano)
   val pT = T(pico)
 
+  override def spoon(text: String): Option[Any] = {
+    val bs = extract(text)
+    if (bs.isDefined) {
+      bs.get._1 match {
+        case m: MagneticFlux => Some(m * bs.get._2)
+        case m: MagneticFluxDensity => Some(m * bs.get._2)
+        case _ => None
+      }
+    } else {
+      None
+    }
+  }
 }
