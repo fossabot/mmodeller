@@ -5,6 +5,7 @@ import ch.uzh.utils.units.Length._
 
 object Area extends Spoon {
 
+  val mm2 = mm*mm
   val m2 = m*m
   val km2 = km*km
   val ha = m(100) * m(100)

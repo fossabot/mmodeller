@@ -134,11 +134,13 @@ object Units {
   type SpecificHeatCapacity           = J/kg~K
   type ThermalConductivity            = W/m~K
   type MolarHeatCapacity              = J/mol~K
+  type ThermalExpansion               = m/m~K
 
   type SpecificEnergy                 = J/kg
   type EnergyDensity                  = J/m3
   type MolarEnergy                    = J/mol
 
+  type ElectricResistivity            = Ohm~m
   type ElectricFieldStrength          = V/m
   type ElectricChargeDensity          = C/m3
   type ElectricFluxDensity            = C/m2
