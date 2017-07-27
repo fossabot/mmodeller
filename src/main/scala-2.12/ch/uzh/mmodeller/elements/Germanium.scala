@@ -1,7 +1,7 @@
 package ch.uzh.mmodeller.elements
 
 import ch.uzh.mmodeller.Materials.{Category, MaterialState}
-import ch.uzh.utils.units.Energy.{J, W, kJ, Ohm}
+import ch.uzh.utils.units.Energy.{J, W, kJ, Ohm, eV}
 import ch.uzh.utils.units.Length.{m, pm, um}
 import ch.uzh.utils.units.Mass.g
 import ch.uzh.utils.units.Chemical.mol
@@ -33,6 +33,7 @@ object Germanium extends Atomic(32, 72.64) with ChemicalGroup with CrystalStruct
   override def electricalResistivity = Some((1 * Ohm*m, Some(fromCelsius(20))))
   override def thermalConductivity = Some(List((60.2 * (W/m*K), Some(K(300)), None)))
   override def thermalExpansion = Some((6.0 * (um/m*K), Some(fromCelsius(25)), None))
+  override def bandGapEnergy = Some((0.67 * eV, K(302), None))
 
   override def speedOfSound = Some(List((5400 * (m/s), Some(fromCelsius(20)), None, None)))
   override def youngModulus = Some(List((GPa(103), None)))

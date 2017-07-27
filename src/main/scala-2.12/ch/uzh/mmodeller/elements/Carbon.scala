@@ -1,7 +1,7 @@
 package ch.uzh.mmodeller.elements
 
 import ch.uzh.mmodeller.Materials.{Category, MaterialState}
-import ch.uzh.utils.units.Energy.{J, W, kJ}
+import ch.uzh.utils.units.Energy.{J, W, kJ, eV}
 import ch.uzh.utils.units.Length.{m, pm, um}
 import ch.uzh.utils.units.Mass.g
 import ch.uzh.utils.units.Chemical.mol
@@ -31,6 +31,7 @@ object Carbon extends Atomic(6, 12.0107) with ChemicalGroup with MagneticOrderin
   override def vanDerWaalsRadius = Some(pm(170))
   override def thermalConductivity = Some(List((140 * (W/m*K), Some(K(300)), Some("graphite")), (2200 * (W/m*K), None, Some("diamond"))))
   override def thermalExpansion = Some((0.8 * (um/m*K), Some(fromCelsius(25)), Some("diamond")))
+  override def bandGapEnergy = Some((5.5 * eV, K(302), Some("diamond")))
 
   override def speedOfSound = Some(List((18350 * (m/s), Some(fromCelsius(20)), Some(MaterialState.Solid), Some("diamond"))))
   override def youngModulus = Some(List((GPa(1050), Some("diamond"))))

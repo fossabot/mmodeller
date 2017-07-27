@@ -1,7 +1,7 @@
 package ch.uzh.mmodeller.elements
 
 import ch.uzh.mmodeller.Materials.{Category, MaterialState}
-import ch.uzh.utils.units.Energy.{J, W, kJ}
+import ch.uzh.utils.units.Energy.{J, W, kJ, eV}
 import ch.uzh.utils.units.Length.{m, pm}
 import ch.uzh.utils.units.Mass.g
 import ch.uzh.utils.units.Chemical.mol
@@ -32,6 +32,7 @@ object Tellurium extends Atomic(52, 127.60) with ChemicalGroup with CrystalStruc
   override def covalentRadius = Some(pm(135))
   override def vanDerWaalsRadius = Some(pm(206))
   override def thermalConductivity = Some(List((3.0 * (W/m*K), Some(K(300)), None)))
+  override def bandGapEnergy = Some((0.33 * eV, K(302), None))
 
   override def speedOfSound = Some(List((2610 * (m/s), Some(fromCelsius(20)), None, None)))
   override def youngModulus = Some(List((GPa(43), None)))

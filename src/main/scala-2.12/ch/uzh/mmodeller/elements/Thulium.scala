@@ -30,7 +30,7 @@ def symbol = "Tm"
   override def atomicRadiusCalc = Some(pm(222))
   override def electricalResistivity = Some((676 * nOhm*m, None))
   override def thermalConductivity = Some(List((16.9 * (W/m*K), Some(K(300)), None)))
-  override def thermalExpansion = Some((13.3 * (um/m*K), None, Some("poly"))
+  override def thermalExpansion = Some((13.3 * (um/m*K), None, Some("poly")))
 
   override def youngModulus = Some(List((GPa(74.0), None)))
   override def shearModulus = Some(List((GPa(30.5), None)))

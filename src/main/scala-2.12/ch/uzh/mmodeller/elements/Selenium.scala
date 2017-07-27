@@ -1,7 +1,7 @@
 package ch.uzh.mmodeller.elements
 
 import ch.uzh.mmodeller.Materials.{Category, MaterialState}
-import ch.uzh.utils.units.Energy.{J, W, kJ}
+import ch.uzh.utils.units.Energy.{J, W, kJ, eV}
 import ch.uzh.utils.units.Length.{m, pm, um}
 import ch.uzh.utils.units.Mass.g
 import ch.uzh.utils.units.Chemical.mol
@@ -33,6 +33,7 @@ object Selenium extends Atomic(34, 78.96) with ChemicalGroup with CrystalStructu
   override def vanDerWaalsRadius = Some(pm(190))
   override def thermalConductivity = Some(List((0.519 * (W/m*K), Some(K(300)), Some("amorphous"))))
   override def thermalExpansion = Some((37 * (um/m*K), Some(fromCelsius(25)), Some("amorphous")))
+  override def bandGapEnergy = Some((1.74 * eV, K(302), Some("gray")))
 
   override def speedOfSound = Some(List((3350 * (m/s), Some(fromCelsius(20)), None, None)))
   override def youngModulus = Some(List((GPa(10), None)))

@@ -34,7 +34,7 @@ object Silicon extends Atomic(14, 28.0855) with ChemicalGroup with CrystalStruct
   override def electricalResistivity = Some((103 * Ohm*m, Some(fromCelsius(20))))
   override def thermalConductivity = Some(List((149 * (W/m*K), Some(K(300)), None)))
   override def thermalExpansion = Some((2.6 * (um/m*K), Some(fromCelsius(25)), None))
-  override def bandGapEnergy = Some((1.12 * eV, Some(K(300))))
+  override def bandGapEnergy = Some((1.12 * eV, K(302), None))
 
   override def speedOfSound = Some(List((8433 * (m/s), Some(fromCelsius(20)), None, None)))
   override def youngModulus = Some(List((GPa(185), None)))
