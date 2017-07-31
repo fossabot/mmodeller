@@ -2,7 +2,7 @@ package ch.uzh.mmodeller.elements
 
 import ch.uzh.mmodeller.Materials.{Category, MaterialState}
 
-object Rutherfordium extends Atomic(104, 267.0) with ChemicalGroup {
+object Rutherfordium extends ChemicalElementBase(104, 267.0) with ChemicalGroup {
   def symbol = "Rf"
   def category = Category.TransitionMetals
   def group = 4

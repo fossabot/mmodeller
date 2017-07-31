@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, atm}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Carbon extends Atomic(6, 12.0107) with ChemicalGroup with MagneticOrdering {
+object Carbon extends ChemicalElementBase(6, 12.0107) with ChemicalGroup with MagneticOrdering {
   def symbol = "C"
   def category = Category.NonMetal
   def group = 14

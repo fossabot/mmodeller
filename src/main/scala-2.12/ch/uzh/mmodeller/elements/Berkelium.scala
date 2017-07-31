@@ -8,7 +8,7 @@ import ch.uzh.utils.units.Mass.g
 import ch.uzh.utils.units.Temperature.K
 import ch.uzh.utils.units.Volume.cm3
 
-object Berkelium extends Atomic(97, 247.0) with Positional with MagneticOrdering  {
+object Berkelium extends ChemicalElementBase(97, 247.0) with Positional with MagneticOrdering  {
   def symbol = "Bk"
   def category = Category.Actinoids
   def col = 9

@@ -7,7 +7,7 @@ import ch.uzh.utils.units.Pressure.MPa
 import ch.uzh.utils.units.Chemical.mol
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Radon extends Atomic(86, 222.0) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Radon extends ChemicalElementBase(86, 222.0) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Rn"
   def category = Category.NobleGases
   def group = 18

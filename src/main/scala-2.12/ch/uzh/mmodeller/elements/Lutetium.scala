@@ -9,7 +9,7 @@ import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 import ch.uzh.utils.units.Volume.cm3
 
-object Lutetium extends Atomic(71, 174.9668) with Positional with CrystalStructure with MagneticOrdering  {
+object Lutetium extends ChemicalElementBase(71, 174.9668) with Positional with CrystalStructure with MagneticOrdering  {
   def symbol = "Lu"
   def category = Category.Lanthanoids
   def col = 15
@@ -31,7 +31,7 @@ object Lutetium extends Atomic(71, 174.9668) with Positional with CrystalStructu
   override def covalentRadius = Some(pm(160))
   override def electricalResistivity = Some((582 * nOhm*m, None))
   override def thermalConductivity = Some(List((16.4 * (W/m*K), Some(K(300)), None)))
-  override def thermalExpansion = Some((9.9 * (um/m*K), None, Some("poly"))
+  override def thermalExpansion = Some((9.9 * (um/m*K), None, Some("poly")))
 
   override def youngModulus = Some(List((GPa(68.6), None)))
   override def shearModulus = Some(List((GPa(27.2), None)))

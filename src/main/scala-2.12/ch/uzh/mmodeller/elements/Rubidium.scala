@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Rubidium extends Atomic(37, 85.4678) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Rubidium extends ChemicalElementBase(37, 85.4678) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Rb"
   def category = Category.AlkaliMetals
   def group = 1

@@ -4,6 +4,28 @@ import ch.uzh.mmodeller.Materials.Category.Category
 import ch.uzh.mmodeller.Materials.MaterialState.MaterialState
 import ch.uzh.utils.Units.{/, Ar, Area, MolarEnergy, Pressure, Temperature, Time}
 
+object Symbols {
+  def all = Map("Ac" -> Actinium,"Al" -> Aluminum,"Am" -> Americium,"Sb" -> Antimony,"Ar" -> Argon,
+    "As" -> Arsenic,"At" -> Astatine,"Ba" -> Barium,"Bk" -> Berkelium,"Be" -> Beryllium,"Bi" -> Bismuth,"Bh" -> Bohrium,
+    "B" -> Boron,"Br" -> Bromine,"Cd" -> Cadmium,"Ca" -> Calcium,"Cf" -> Californium,"C" -> Carbon,"Ce" -> Cerium,
+    "Cs" -> Cesium,"Cl" -> Chlorine,"Cr" -> Chromium,"Co" -> Cobalt,"Cu" -> Copper,"Cm" -> Curium,"Ds" -> Darmstadtium,
+    "Db" -> Dubnium,"Dy" -> Dysprosium,"Es" -> Einsteinium,"Er" -> Erbium,"Eu" -> Europium,"Fm" -> Fermium,
+    "F" -> Fluorine,"Fr" -> Francium,"Gd" -> Gadolinium,"Ga" -> Gallium,"Ge" -> Germanium,"Au" -> Gold,"Hf" -> Hafnium,
+    "Hs" -> Hassium,"He" -> Helium,"Ho" -> Holmium,"H" -> Hydrogen,"In" -> Indium,"I" -> Iodine,"Ir" -> Iridium,
+    "Fe" -> Iron,"Kr" -> Krypton,"La" -> Lanthanum,"Lr" -> Lawrencium,"Pb" -> Lead,"Li" -> Lithium,"Lu" -> Lutetium,
+    "Mg" -> Magnesium,"Mn" -> Manganese,"Mt" -> Meitnerium,"Md" -> Mendelevium,"Hg" -> Mercury,"Mo" -> Molybdenum,
+    "Nd" -> Neodymium,"Ne" -> Neon,"Np" -> Neptunium,"Ni" -> Nickel,"Nb" -> Niobium,"N" -> Nitrogen,
+    "No" -> Nobelium,"Os" -> Osmium,"O" -> Oxygen,"Pd" -> Palladium,"P" -> Phosphorus,"Pt" -> Platinum,
+    "Pu" -> Plutonium,"Po" -> Polonium,"K" -> Potassium,"Pr" -> Praseodymium,"Pm" -> Promethium,"Pa" -> Protactinium,
+    "Ra" -> Radium,"Rn" -> Radon,"Re" -> Rhenium,"Rh" -> Rhodium,"Rg" -> Roentgenium,"Rb" -> Rubidium,"Ru" -> Ruthenium,
+    "Rf" -> Rutherfordium,"Sm" -> Samarium,"Sc" -> Scandium,"Sg" -> Seaborgium,"Se" -> Selenium,"Si" -> Silicon,
+    "Ag" -> Silver,"Na" -> Sodium,"Sr" -> Strontium,"S" -> Sulfur,"Ta" -> Tantalum,"Tc" -> Technetium,
+    "Te" -> Tellurium,"Tb" -> Terbium,"Tl" -> Thallium,"Th" -> Thorium,"Tm" -> Thulium,"Sn" -> Tin,"Ti" -> Titanium,
+    "W" -> Tungsten,"Uuh" -> Ununhexium,"Uuo" -> Ununoctium,"Uup" -> Ununpentium, "Uuq" -> Ununquadium,
+    "Uus" -> Ununseptium,"Uut" -> Ununtrium,"U" -> Uranium,"V" -> Vanadium, "Xe" -> Xenon,"Yb" -> Ytterbium,
+    "Y" -> Yttrium,"Zn" -> Zinc,"Zr" -> Zirconium)
+}
+
 /**
   * Base Traits for All Chemical Elements
   */
@@ -85,6 +107,22 @@ trait ChemicalElement {
     * @return State
     */
   def phase: MaterialState
+
+  /**
+    * This is necessary to do our redox computations
+    * @return Amount of this element that form a natural bond
+    */
+  def naturalState: Int = symbol match {
+    case "H" => 2
+    case "O" => 2
+    case "N" => 2
+    case "F" => 2
+    case "Cl" => 2
+    case "Br" => 2
+    case "I" => 2
+    case "S" => 8
+    case _ => 1
+  }
 }
 
 /**

@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Selenium extends Atomic(34, 78.96) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Selenium extends ChemicalElementBase(34, 78.96) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Se"
   def category = Category.NonMetal
   def group = 16

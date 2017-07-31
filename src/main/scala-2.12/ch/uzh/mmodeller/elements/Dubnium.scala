@@ -2,7 +2,7 @@ package ch.uzh.mmodeller.elements
 
 import ch.uzh.mmodeller.Materials.{Category, MaterialState}
 
-object Dubnium extends Atomic(105, 268.0) with ChemicalGroup {
+object Dubnium extends ChemicalElementBase(105, 268.0) with ChemicalGroup {
   def symbol = "Db"
   def category = Category.TransitionMetals
   def group = 5

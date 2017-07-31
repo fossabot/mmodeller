@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.GPa
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Silicon extends Atomic(14, 28.0855) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Silicon extends ChemicalElementBase(14, 28.0855) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Si"
   def category = Category.Metalloids
   def group = 14

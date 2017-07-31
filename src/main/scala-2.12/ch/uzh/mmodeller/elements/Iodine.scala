@@ -9,7 +9,7 @@ import ch.uzh.utils.units.Volume.cm3
 import ch.uzh.utils.units.Pressure.{GPa, MPa, Pa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Iodine extends Atomic(53, 126.90447) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Iodine extends ChemicalElementBase(53, 126.90447) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "I"
   def category = Category.Halogens
   def group = 17

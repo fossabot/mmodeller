@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.MPa
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Mercury extends Atomic(80, 200.59) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Mercury extends ChemicalElementBase(80, 200.59) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Hg"
   def category = Category.TransitionMetals
   def group = 12

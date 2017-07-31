@@ -9,7 +9,7 @@ import ch.uzh.utils.units.Volume.cm3
 import ch.uzh.utils.units.Pressure.GPa
 import ch.uzh.utils.units.Temperature.K
 
-object Promethium extends Atomic(61, 145.0) with Positional with CrystalStructure with MagneticOrdering  {
+object Promethium extends ChemicalElementBase(61, 145.0) with Positional with CrystalStructure with MagneticOrdering  {
   def symbol = "Pm"
   def category = Category.Lanthanoids
   def col = 5

@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Ytterbium extends Atomic(70, 173.054) with Positional with CrystalStructure with MagneticOrdering  {
+object Ytterbium extends ChemicalElementBase(70, 173.054) with Positional with CrystalStructure with MagneticOrdering  {
   def symbol = "Yb"
   def category = Category.Lanthanoids
   def col = 14

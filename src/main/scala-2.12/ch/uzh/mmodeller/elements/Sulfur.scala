@@ -9,7 +9,7 @@ import ch.uzh.utils.units.Volume.cm3
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Sulfur extends Atomic(16, 32.065) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Sulfur extends ChemicalElementBase(16, 32.065) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "S"
   def category = Category.NonMetal
   def group = 16

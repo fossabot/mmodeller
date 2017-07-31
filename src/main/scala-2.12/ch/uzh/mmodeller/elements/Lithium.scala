@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Lithium extends Atomic(3, 6.941) with ChemicalGroup with CrystalStructure with MagneticOrdering {
+object Lithium extends ChemicalElementBase(3, 6.941) with ChemicalGroup with CrystalStructure with MagneticOrdering {
   def symbol = "Li"
   def category = Category.AlkaliMetals
   def group = 1

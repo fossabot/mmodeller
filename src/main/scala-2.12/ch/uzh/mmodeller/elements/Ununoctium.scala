@@ -9,7 +9,7 @@ import ch.uzh.utils.units.Volume.cm3
 import ch.uzh.utils.units.Pressure.MPa
 import ch.uzh.utils.units.Temperature.K
 
-object Ununoctium extends Atomic(118, 294.0) with ChemicalGroup {
+object Ununoctium extends ChemicalElementBase(118, 294.0) with ChemicalGroup {
   def symbol = "Uuo"
   def category = Category.NobleGases
   def group = 18

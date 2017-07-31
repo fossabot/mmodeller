@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Cobalt extends Atomic(27, 58.933195) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Cobalt extends ChemicalElementBase(27, 58.933195) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Co"
   def category = Category.TransitionMetals
   def group = 9

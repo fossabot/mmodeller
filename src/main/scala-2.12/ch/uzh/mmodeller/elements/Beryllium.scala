@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Berylium extends Atomic(4, 9.012182) with ChemicalGroup with CrystalStructure with MagneticOrdering {
+object Beryllium extends ChemicalElementBase(4, 9.012182) with ChemicalGroup with CrystalStructure with MagneticOrdering {
   def symbol = "Be"
   def category = Category.AlkalineEarthMetals
   def group = 2

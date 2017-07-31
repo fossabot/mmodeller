@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Lead extends Atomic(82, 207.2) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Lead extends ChemicalElementBase(82, 207.2) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Pb"
   def category = Category.PostTransitionMetals
   def group = 14

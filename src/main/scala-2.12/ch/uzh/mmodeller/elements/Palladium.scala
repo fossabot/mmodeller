@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Palladium extends Atomic(46, 106.42) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Palladium extends ChemicalElementBase(46, 106.42) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Pd"
   def category = Category.TransitionMetals
   def group = 10

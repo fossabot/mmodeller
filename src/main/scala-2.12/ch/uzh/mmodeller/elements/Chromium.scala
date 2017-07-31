@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Chromium extends Atomic(24, 51.9961) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Chromium extends ChemicalElementBase(24, 51.9961) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Cr"
   def category = Category.TransitionMetals
   def group = 6

@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Calcium extends Atomic(20, 40.078) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Calcium extends ChemicalElementBase(20, 40.078) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Ca"
   def category = Category.AlkalineEarthMetals
   def group = 2

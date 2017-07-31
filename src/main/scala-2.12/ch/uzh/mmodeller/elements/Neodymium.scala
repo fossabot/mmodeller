@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Neodymium extends Atomic(60, 144.242) with Positional with CrystalStructure with MagneticOrdering  {
+object Neodymium extends ChemicalElementBase(60, 144.242) with Positional with CrystalStructure with MagneticOrdering  {
   def symbol = "Nd"
   def category = Category.Lanthanoids
   def col = 4

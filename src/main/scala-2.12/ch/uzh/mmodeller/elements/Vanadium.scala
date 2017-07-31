@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.GPa
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Vanadium extends Atomic(23, 50.9415) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Vanadium extends ChemicalElementBase(23, 50.9415) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "V"
   def category = Category.TransitionMetals
   def group = 5

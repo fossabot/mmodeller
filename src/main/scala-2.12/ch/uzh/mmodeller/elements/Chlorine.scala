@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{MPa, kPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Chlorine extends Atomic(17, 35.453) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Chlorine extends ChemicalElementBase(17, 35.453) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Cl"
   def category = Category.Halogens
   def group = 17

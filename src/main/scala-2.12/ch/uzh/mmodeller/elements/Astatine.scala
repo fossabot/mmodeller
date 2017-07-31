@@ -7,7 +7,7 @@ import ch.uzh.utils.units.Energy.{W, kJ}
 import ch.uzh.utils.units.Length.m
 import ch.uzh.utils.units.Temperature.K
 
-object Astatine extends Atomic(85, 210.0) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Astatine extends ChemicalElementBase(85, 210.0) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
 def symbol = "At"
   def category = Category.Halogens
   def group = 17

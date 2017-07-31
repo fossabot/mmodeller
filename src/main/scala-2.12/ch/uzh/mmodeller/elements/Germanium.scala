@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Germanium extends Atomic(32, 72.64) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Germanium extends ChemicalElementBase(32, 72.64) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Ge"
   def category = Category.Metalloids
   def group = 14

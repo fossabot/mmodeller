@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Hafnium extends Atomic(72, 178.48) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Hafnium extends ChemicalElementBase(72, 178.48) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Hf"
   def category = Category.TransitionMetals
   def group = 4

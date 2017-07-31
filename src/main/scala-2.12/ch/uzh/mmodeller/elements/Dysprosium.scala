@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Dysprosium extends Atomic(66, 162.500) with Positional with CrystalStructure with MagneticOrdering  {
+object Dysprosium extends ChemicalElementBase(66, 162.500) with Positional with CrystalStructure with MagneticOrdering  {
   def symbol = "Dy"
   def category = Category.Lanthanoids
   def col = 10

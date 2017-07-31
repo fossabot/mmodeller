@@ -75,7 +75,7 @@ object Exponents {
   case class ExponentToValue[T](value : Int)
   implicit val p0ToInt: ExponentToValue[P0] = ExponentToValue[P0](0)
   implicit def nextToInt[P <: NatExp](implicit v : ExponentToValue[P]): ExponentToValue[NextExp[P]] = ExponentToValue[NextExp[P]]( 1 + v.value )
-  implicit def negToInt [P <: PosExp](implicit v : ExponentToValue[P]): ExponentToValue[NegExp[P]] = ExponentToValue[NegExp[P] ](    -v.value )
+  implicit def negToInt [P <: PosExp](implicit v : ExponentToValue[P]): ExponentToValue[NegExp[P]] = ExponentToValue[NegExp[P] ]( -v.value )
 
 
   /**

@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Length.m
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Cesium extends Atomic(55, 132.9054) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Cesium extends ChemicalElementBase(55, 132.9054) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Cs"
   def category = Category.AlkaliMetals
   def group = 1

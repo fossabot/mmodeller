@@ -7,7 +7,7 @@ import ch.uzh.utils.units.Chemical.mol
 import ch.uzh.utils.units.Volume.cm3
 import ch.uzh.utils.units.Temperature.K
 
-object Curium extends Atomic(96, 247.0) with Positional with CrystalStructure with MagneticOrdering  {
+object Curium extends ChemicalElementBase(96, 247.0) with Positional with CrystalStructure with MagneticOrdering  {
   def symbol = "Cm"
   def category = Category.Actinoids
   def col = 8

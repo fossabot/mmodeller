@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Samarium extends Atomic(62, 150.36) with Positional with CrystalStructure with MagneticOrdering  {
+object Samarium extends ChemicalElementBase(62, 150.36) with Positional with CrystalStructure with MagneticOrdering  {
   def symbol = "Sm"
   def category = Category.Lanthanoids
   def col = 6

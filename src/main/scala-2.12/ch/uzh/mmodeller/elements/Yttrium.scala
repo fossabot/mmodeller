@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Yttrium extends Atomic(39, 88.90585) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Yttrium extends ChemicalElementBase(39, 88.90585) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Y"
   def category = Category.TransitionMetals
   def group = 3

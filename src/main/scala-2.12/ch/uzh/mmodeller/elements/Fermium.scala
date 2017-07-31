@@ -5,7 +5,7 @@ import ch.uzh.utils.units.Energy.kJ
 import ch.uzh.utils.units.Chemical.mol
 import ch.uzh.utils.units.Temperature.K
 
-object Fermium extends Atomic(100, 257.0) with Positional {
+object Fermium extends ChemicalElementBase(100, 257.0) with Positional {
   def symbol = "Fm"
   def category = Category.Actinoids
   def col = 12

@@ -9,7 +9,7 @@ import ch.uzh.utils.units.Volume.cm3
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Thulium extends Atomic(69, 168.93421) with Positional with CrystalStructure with MagneticOrdering  {
+object Thulium extends ChemicalElementBase(69, 168.93421) with Positional with CrystalStructure with MagneticOrdering  {
 def symbol = "Tm"
   def category = Category.Lanthanoids
   def col = 13

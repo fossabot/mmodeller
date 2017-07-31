@@ -20,7 +20,7 @@ object Units {
   type / [A <: Unit, B <: Unit] = A#Div[B]
   type ~ [A <: Unit, B <: Unit] = A#Mul[B] // We can not use * as a type, because it is reserved for variable length argument lists
 
-  case class Quantity[M_ <: Exp, KG_ <: Exp, S_ <: Exp, A_ <: Exp, K_ <: Exp, Mol_ <: Exp, CD_ <: Exp](value: Double = 1.0) extends Unit {
+  case class Quantity[M_ <: Exp, KG_ <: Exp, S_ <: Exp, A_ <: Exp, K_ <: Exp, Mol_ <: Exp, CD_ <: Exp](value: Double = 1.0) extends Unit with Ordered[Quantity[M_, KG_, S_, A_, K_, Mol_, CD_]] {
     type M   = M_
     type KG  = KG_
     type S   = S_
@@ -57,7 +57,10 @@ object Units {
       }
       override def toString: String = pivot + " +- " + tolerance
     }
+
+    override def compare(that: Quantity[M_, KG_, S_, A_, K_, Mol_, CD_]): Int = this.value compare that.value
   }
+
 
   implicit def measure(v : Double) = Quantity[__, __, __, __, __, __, __](v)
 

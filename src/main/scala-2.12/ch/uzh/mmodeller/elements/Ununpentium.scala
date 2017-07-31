@@ -2,7 +2,7 @@ package ch.uzh.mmodeller.elements
 
 import ch.uzh.mmodeller.Materials.{Category, MaterialState}
 
-object Ununpentium extends Atomic(115, 288.0) with ChemicalGroup {
+object Ununpentium extends ChemicalElementBase(115, 288.0) with ChemicalGroup {
   def symbol = "Uup"
   def category = Category.PostTransitionMetals
   def group = 15

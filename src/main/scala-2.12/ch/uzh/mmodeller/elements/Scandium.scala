@@ -9,7 +9,7 @@ import ch.uzh.utils.units.Volume.cm3
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Scandium extends Atomic(21, 44.955912) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Scandium extends ChemicalElementBase(21, 44.955912) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Sc"
   def category = Category.TransitionMetals
   def group = 3

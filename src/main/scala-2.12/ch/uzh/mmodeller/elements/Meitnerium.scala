@@ -2,7 +2,7 @@ package ch.uzh.mmodeller.elements
 
 import ch.uzh.mmodeller.Materials.{Category, MaterialState}
 
-object Meitnerium extends Atomic(109, 276.0) with ChemicalGroup {
+object Meitnerium extends ChemicalElementBase(109, 276.0) with ChemicalGroup {
   def symbol = "Mt"
   def category = Category.TransitionMetals
   def group = 9

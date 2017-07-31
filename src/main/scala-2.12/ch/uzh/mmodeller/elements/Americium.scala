@@ -8,7 +8,7 @@ import ch.uzh.utils.units.Chemical.mol
 import ch.uzh.utils.units.Volume.cm3
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Americium extends Atomic(95, 243.0) with Positional with CrystalStructure with MagneticOrdering  {
+object Americium extends ChemicalElementBase(95, 243.0) with Positional with CrystalStructure with MagneticOrdering  {
   def symbol = "Am"
   def category = Category.Actinoids
   def col = 7

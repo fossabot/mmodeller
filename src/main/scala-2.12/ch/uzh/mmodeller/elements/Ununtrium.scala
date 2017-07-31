@@ -2,7 +2,7 @@ package ch.uzh.mmodeller.elements
 
 import ch.uzh.mmodeller.Materials.{Category, MaterialState}
 
-object Ununtrium extends Atomic(113, 284.0) with ChemicalGroup {
+object Ununtrium extends ChemicalElementBase(113, 284.0) with ChemicalGroup {
   def symbol = "Uut"
   def category = Category.PostTransitionMetals
   def group = 13

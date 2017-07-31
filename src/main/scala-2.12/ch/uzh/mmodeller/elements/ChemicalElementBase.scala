@@ -13,7 +13,7 @@ import ch.uzh.utils.Units.{Temperature, ThermalConductivity, ThermalExpansion, V
   * @param number atomic number
   * @param atomicWeight atomic weight
   */
-abstract class Atomic(number: Int, atomicWeight: Ar) extends ChemicalElement {
+abstract class ChemicalElementBase(number: Int, atomicWeight: Ar) extends ChemicalElement {
 
   /**
     * A proton is a subatomic particle, symbol p or p+, with a positive electric charge
@@ -44,6 +44,11 @@ abstract class Atomic(number: Int, atomicWeight: Ar) extends ChemicalElement {
     * @return weight in Ar
     */
   def standardAtomicWeight: Ar = atomicWeight
+
+  /**
+    * @return Initial oxidation state of the Atom (0)
+    */
+  def initialOxidationState: Int = 0
 
   /**
     * Oxidation states simplify the whole process of working out what is being oxidised

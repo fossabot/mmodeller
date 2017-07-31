@@ -4,7 +4,7 @@ import ch.uzh.mmodeller.Materials.{Category, MaterialState}
 import ch.uzh.utils.units.Chemical.mol
 import ch.uzh.utils.units.Energy.kJ
 
-object Lawrencium extends Atomic(103, 262.0) with Positional {
+object Lawrencium extends ChemicalElementBase(103, 262.0) with Positional {
   def symbol = "Lr"
   def category = Category.Actinoids
   def col = 15

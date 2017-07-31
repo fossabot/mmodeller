@@ -8,7 +8,7 @@ import ch.uzh.utils.units.Chemical.mol
 import ch.uzh.utils.units.Volume.cm3
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Polonium extends Atomic(84, 209.0) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Polonium extends ChemicalElementBase(84, 209.0) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Po"
   def category = Category.Metalloids
   def group = 16

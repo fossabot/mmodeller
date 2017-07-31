@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.MPa
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Gallium extends Atomic(31, 69.723) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Gallium extends ChemicalElementBase(31, 69.723) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Ga"
   def category = Category.PostTransitionMetals
   def group = 13

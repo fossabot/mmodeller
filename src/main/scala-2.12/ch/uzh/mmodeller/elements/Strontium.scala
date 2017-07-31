@@ -9,7 +9,7 @@ import ch.uzh.utils.units.Volume.cm3
 import ch.uzh.utils.units.Pressure.GPa
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Strontium extends Atomic(38, 87.62) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Strontium extends ChemicalElementBase(38, 87.62) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Sr"
   def category = Category.AlkalineEarthMetals
   def group = 2

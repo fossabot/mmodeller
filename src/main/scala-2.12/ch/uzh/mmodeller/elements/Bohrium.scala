@@ -2,7 +2,7 @@ package ch.uzh.mmodeller.elements
 
 import ch.uzh.mmodeller.Materials.{Category, MaterialState}
 
-object Bohrium extends Atomic(107, 272.0) with ChemicalGroup {
+object Bohrium extends ChemicalElementBase(107, 272.0) with ChemicalGroup {
   def symbol = "Bh"
   def category = Category.TransitionMetals
   def group = 7

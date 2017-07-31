@@ -2,7 +2,7 @@ package ch.uzh.mmodeller.elements
 
 import ch.uzh.mmodeller.Materials.{Category, MaterialState}
 
-object Ununseptium extends Atomic(117, 294.0) with ChemicalGroup {
+object Ununseptium extends ChemicalElementBase(117, 294.0) with ChemicalGroup {
   def symbol = "Uus"
   def category = Category.Unknown
   def group = 17

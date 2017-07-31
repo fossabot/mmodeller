@@ -8,7 +8,7 @@ import ch.uzh.utils.units.Chemical.mol
 import ch.uzh.utils.units.Volume.cm3
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Radium extends Atomic(88, 226.0) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Radium extends ChemicalElementBase(88, 226.0) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Ra"
   def category = Category.AlkalineEarthMetals
   def group = 2

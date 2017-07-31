@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Cadmium extends Atomic(48, 112.411) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Cadmium extends ChemicalElementBase(48, 112.411) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Cd"
   def category = Category.TransitionMetals
   def group = 12

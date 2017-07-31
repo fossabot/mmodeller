@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{MPa, kPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Xenon extends Atomic(54, 131.293) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Xenon extends ChemicalElementBase(54, 131.293) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Xe"
   def category = Category.NobleGases
   def group = 18

@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa, kPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Potassium extends Atomic(19, 39.0983) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Potassium extends ChemicalElementBase(19, 39.0983) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "K"
   def category = Category.AlkaliMetals
   def group = 1

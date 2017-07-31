@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Manganese extends Atomic(25, 54.938045) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Manganese extends ChemicalElementBase(25, 54.938045) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Mn"
   def category = Category.TransitionMetals
   def group = 7

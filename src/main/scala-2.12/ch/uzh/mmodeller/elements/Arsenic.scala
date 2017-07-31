@@ -9,7 +9,7 @@ import ch.uzh.utils.units.Volume.cm3
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Arsenic extends Atomic(33, 74.92160) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Arsenic extends ChemicalElementBase(33, 74.92160) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "As"
   def category = Category.Metalloids
   def group = 15

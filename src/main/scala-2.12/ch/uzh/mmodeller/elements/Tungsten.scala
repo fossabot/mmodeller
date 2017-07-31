@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Tungsten extends Atomic(74, 183.84) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Tungsten extends ChemicalElementBase(74, 183.84) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "W"
   def category = Category.TransitionMetals
   def group = 6

@@ -11,7 +11,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Silver extends Atomic(47, 107.8682) with ChemicalGroup with CrystalStructure with MagneticOrdering with ThermalDiffusivity  {
+object Silver extends ChemicalElementBase(47, 107.8682) with ChemicalGroup with CrystalStructure with MagneticOrdering with ThermalDiffusivity  {
 def symbol = "Ag"
   def category = Category.TransitionMetals
   def group = 11

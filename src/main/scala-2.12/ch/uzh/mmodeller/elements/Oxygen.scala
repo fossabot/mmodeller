@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{MPa, kPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Oxygen extends Atomic(8, 15.9994) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Oxygen extends ChemicalElementBase(8, 15.9994) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "O"
   def category = Category.NonMetal
   def group = 16

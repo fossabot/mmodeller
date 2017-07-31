@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Lanthanum extends Atomic(57, 138.90547) with Positional with CrystalStructure with MagneticOrdering  {
+object Lanthanum extends ChemicalElementBase(57, 138.90547) with Positional with CrystalStructure with MagneticOrdering  {
   def symbol = "La"
   def category = Category.Lanthanoids
   def col = 1

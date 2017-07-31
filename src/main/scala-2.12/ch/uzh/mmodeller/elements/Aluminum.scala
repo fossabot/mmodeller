@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Aluminum extends Atomic(13, 26.9815386) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Aluminum extends ChemicalElementBase(13, 26.9815386) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Al"
   def category = Category.PostTransitionMetals
   def group = 13

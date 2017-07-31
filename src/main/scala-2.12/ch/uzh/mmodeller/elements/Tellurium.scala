@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Tellurium extends Atomic(52, 127.60) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Tellurium extends ChemicalElementBase(52, 127.60) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Te"
   def category = Category.Metalloids
   def group = 16

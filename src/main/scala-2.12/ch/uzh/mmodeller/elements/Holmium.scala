@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Holmium extends Atomic(67, 164.93032) with Positional with CrystalStructure with MagneticOrdering  {
+object Holmium extends ChemicalElementBase(67, 164.93032) with Positional with CrystalStructure with MagneticOrdering  {
   def symbol = "Ho"
   def category = Category.Lanthanoids
   def col = 11

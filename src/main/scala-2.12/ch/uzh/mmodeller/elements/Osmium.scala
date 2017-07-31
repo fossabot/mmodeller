@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Osmium extends Atomic(76, 190.23) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Osmium extends ChemicalElementBase(76, 190.23) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Os"
   def category = Category.TransitionMetals
   def group = 8

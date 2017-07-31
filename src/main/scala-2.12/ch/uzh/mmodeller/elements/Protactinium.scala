@@ -8,7 +8,7 @@ import ch.uzh.utils.units.Chemical.mol
 import ch.uzh.utils.units.Volume.cm3
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Protactinium extends Atomic(91, 231.03588) with Positional with CrystalStructure with MagneticOrdering  {
+object Protactinium extends ChemicalElementBase(91, 231.03588) with Positional with CrystalStructure with MagneticOrdering  {
   def symbol = "Pa"
   def category = Category.Actinoids
   def col = 3

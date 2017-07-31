@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{kPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Hydrogen extends Atomic(1, 1.00794) with ChemicalGroup with CrystalStructure with MagneticOrdering {
+object Hydrogen extends ChemicalElementBase(1, 1.00794) with ChemicalGroup with CrystalStructure with MagneticOrdering {
   def symbol = "H"
 	def category = Category.NonMetal
 	def group = 1

@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Length.m
 import ch.uzh.utils.units.Pressure.{MPa, kPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Fluorine extends Atomic(9, 18.9984032) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Fluorine extends ChemicalElementBase(9, 18.9984032) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "F"
   def category = Category.Halogens
   def group = 17

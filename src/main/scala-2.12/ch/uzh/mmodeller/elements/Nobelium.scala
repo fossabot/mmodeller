@@ -4,7 +4,7 @@ import ch.uzh.mmodeller.Materials.{Category, MaterialState}
 import ch.uzh.utils.units.Energy.kJ
 import ch.uzh.utils.units.Chemical.mol
 
-object Nobelium extends Atomic(102, 259.0) with Positional {
+object Nobelium extends ChemicalElementBase(102, 259.0) with Positional {
   def symbol = "No"
   def category = Category.Actinoids
   def col = 14

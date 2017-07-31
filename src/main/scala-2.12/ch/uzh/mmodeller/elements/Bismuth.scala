@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Bismuth extends Atomic(83, 208.98040) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Bismuth extends ChemicalElementBase(83, 208.98040) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Bi"
   def category = Category.PostTransitionMetals
   def group = 15

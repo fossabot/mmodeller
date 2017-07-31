@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Iridium extends Atomic(77, 192.217) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Iridium extends ChemicalElementBase(77, 192.217) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Ir"
   def category = Category.TransitionMetals
   def group = 9

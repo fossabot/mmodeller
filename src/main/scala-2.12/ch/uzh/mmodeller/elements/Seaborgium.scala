@@ -2,7 +2,7 @@ package ch.uzh.mmodeller.elements
 
 import ch.uzh.mmodeller.Materials.{Category, MaterialState}
 
-object Seaborgium extends Atomic(106, 271.0) with ChemicalGroup {
+object Seaborgium extends ChemicalElementBase(106, 271.0) with ChemicalGroup {
   def symbol = "Sg"
   def category = Category.TransitionMetals
   def group = 6

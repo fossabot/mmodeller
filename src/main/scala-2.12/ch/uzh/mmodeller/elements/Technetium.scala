@@ -8,7 +8,7 @@ import ch.uzh.utils.units.Chemical.mol
 import ch.uzh.utils.units.Volume.cm3
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Technetium extends Atomic(43, 98.0) with ChemicalGroup with CrystalStructure with MagneticOrdering with ElectronAffinity {
+object Technetium extends ChemicalElementBase(43, 98.0) with ChemicalGroup with CrystalStructure with MagneticOrdering with ElectronAffinity {
   def symbol = "Tc"
   def category = Category.TransitionMetals
   def group = 7

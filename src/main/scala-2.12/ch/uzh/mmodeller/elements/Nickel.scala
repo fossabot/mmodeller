@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Nickel extends Atomic(28, 58.6934) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Nickel extends ChemicalElementBase(28, 58.6934) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Ni"
   def category = Category.TransitionMetals
   def group = 10

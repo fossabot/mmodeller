@@ -2,7 +2,7 @@ package ch.uzh.mmodeller.elements
 
 import ch.uzh.mmodeller.Materials.{Category, MaterialState}
 
-object Copernicium extends Atomic(112, 285.0) with ChemicalGroup {
+object Copernicium extends ChemicalElementBase(112, 285.0) with ChemicalGroup {
   def symbol = "Cn"
   def category = Category.TransitionMetals
   def group = 12

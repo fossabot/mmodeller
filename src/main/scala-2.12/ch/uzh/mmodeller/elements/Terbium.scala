@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Terbium extends Atomic(65, 158.92535) with Positional with CrystalStructure with MagneticOrdering  {
+object Terbium extends ChemicalElementBase(65, 158.92535) with Positional with CrystalStructure with MagneticOrdering  {
   def symbol = "Tb"
   def category = Category.Lanthanoids
   def col = 9

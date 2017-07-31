@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Length.m
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Europium extends Atomic(63, 151.964) with Positional with CrystalStructure with MagneticOrdering  {
+object Europium extends ChemicalElementBase(63, 151.964) with Positional with CrystalStructure with MagneticOrdering  {
 def symbol = "Eu"
   def category = Category.Lanthanoids
   def col = 7

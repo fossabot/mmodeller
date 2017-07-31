@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Thorium extends Atomic(90, 232.03806) with Positional with CrystalStructure with MagneticOrdering  {
+object Thorium extends ChemicalElementBase(90, 232.03806) with Positional with CrystalStructure with MagneticOrdering  {
   def symbol = "Th"
   def category = Category.Actinoids
   def col = 2

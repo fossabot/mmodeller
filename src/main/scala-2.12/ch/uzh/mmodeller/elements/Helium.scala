@@ -9,7 +9,7 @@ import ch.uzh.utils.units.Volume.L
 import ch.uzh.utils.units.Pressure.{MPa, kPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Helium extends Atomic(2, 4.002602) with ChemicalGroup with CrystalStructure with MagneticOrdering {
+object Helium extends ChemicalElementBase(2, 4.002602) with ChemicalGroup with CrystalStructure with MagneticOrdering {
   def symbol = "He"
   def category = Category.NobleGases
   def group = 18

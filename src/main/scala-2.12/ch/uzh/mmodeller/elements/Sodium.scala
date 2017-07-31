@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Sodium extends Atomic(11, 22.98976928) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Sodium extends ChemicalElementBase(11, 22.98976928) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Na"
   def category = Category.AlkaliMetals
   def group = 1

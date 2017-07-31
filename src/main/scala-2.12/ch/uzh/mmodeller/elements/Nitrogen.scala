@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{MPa, kPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Nitrogen extends Atomic(7, 14.0067) with ChemicalGroup with CrystalStructure with MagneticOrdering {
+object Nitrogen extends ChemicalElementBase(7, 14.0067) with ChemicalGroup with CrystalStructure with MagneticOrdering {
   def symbol = "N"
   def category = Category.NonMetal
   def group = 15

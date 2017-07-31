@@ -2,7 +2,7 @@ package ch.uzh.mmodeller.elements
 
 import ch.uzh.mmodeller.Materials.{Category, MaterialState}
 
-object Darmstadtium extends Atomic(110, 281.0) with ChemicalGroup {
+object Darmstadtium extends ChemicalElementBase(110, 281.0) with ChemicalGroup {
   def symbol = "Ds"
   def category = Category.TransitionMetals
   def group = 10

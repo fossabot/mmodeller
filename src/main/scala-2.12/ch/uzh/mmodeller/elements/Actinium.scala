@@ -8,7 +8,7 @@ import ch.uzh.utils.units.Chemical.mol
 import ch.uzh.utils.units.Volume.cm3
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Actinium extends Atomic(89, 227.0) with Positional with CrystalStructure with MagneticOrdering  {
+object Actinium extends ChemicalElementBase(89, 227.0) with Positional with CrystalStructure with MagneticOrdering  {
   def symbol = "Ac"
   def category = Category.Actinoids
   def col = 1

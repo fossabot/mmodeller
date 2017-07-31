@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Platinum extends Atomic(78, 195.084) with ChemicalGroup with CrystalStructure with MagneticOrdering with TensileStrength  {
+object Platinum extends ChemicalElementBase(78, 195.084) with ChemicalGroup with CrystalStructure with MagneticOrdering with TensileStrength  {
 def symbol = "Pt"
   def category = Category.TransitionMetals
   def group = 10

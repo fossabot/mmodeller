@@ -7,7 +7,7 @@ import ch.uzh.utils.units.Mass.g
 import ch.uzh.utils.units.Temperature.K
 import ch.uzh.utils.units.Volume.cm3
 
-object Californium extends Atomic(98, 251.0) with Positional {
+object Californium extends ChemicalElementBase(98, 251.0) with Positional {
   def symbol = "Cf"
   def category = Category.Actinoids
   def col = 10

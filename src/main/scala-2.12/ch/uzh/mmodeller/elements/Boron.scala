@@ -9,7 +9,7 @@ import ch.uzh.utils.units.Volume.cm3
 import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Boron extends Atomic(5, 10.811) with ChemicalGroup with MagneticOrdering {
+object Boron extends ChemicalElementBase(5, 10.811) with ChemicalGroup with MagneticOrdering {
   def symbol = "B"
   def category = Category.Metalloids
   def group = 13

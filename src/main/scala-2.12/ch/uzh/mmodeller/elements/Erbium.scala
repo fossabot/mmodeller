@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Erbium extends Atomic(68, 167.259) with Positional with CrystalStructure with MagneticOrdering  {
+object Erbium extends ChemicalElementBase(68, 167.259) with Positional with CrystalStructure with MagneticOrdering  {
   def symbol = "Er"
   def category = Category.Lanthanoids
   def col = 12
@@ -31,7 +31,7 @@ object Erbium extends Atomic(68, 167.259) with Positional with CrystalStructure 
   override def atomicRadiusCalc = Some(pm(226))
   override def electricalResistivity = Some((0.860 * uOhm*m, None))
   override def thermalConductivity = Some(List((14.5 * (W/m*K), Some(K(300)), None)))
-  override def thermalExpansion = Some((12.2 * (um/m*K), None, Some("poly"))
+  override def thermalExpansion = Some((12.2 * (um/m*K), None, Some("poly")))
 
   override def speedOfSound = Some(List((2830 * (m/s), Some(fromCelsius(20)), None, None)))
   override def youngModulus = Some(List((GPa(69.9), None)))

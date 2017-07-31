@@ -9,7 +9,7 @@ import ch.uzh.utils.units.Volume.cm3
 import ch.uzh.utils.units.Pressure.GPa
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Phosphorus extends Atomic(15, 30.973762) with ChemicalGroup with MagneticOrdering  {
+object Phosphorus extends ChemicalElementBase(15, 30.973762) with ChemicalGroup with MagneticOrdering  {
   def symbol = "P"
   def category = Category.NonMetal
   def group = 15

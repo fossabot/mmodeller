@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Gold extends Atomic(79, 196.966569) with ChemicalGroup with CrystalStructure with MagneticOrdering with TensileStrain {
+object Gold extends ChemicalElementBase(79, 196.966569) with ChemicalGroup with CrystalStructure with MagneticOrdering with TensileStrain {
   def symbol = "Au"
   def category = Category.TransitionMetals
   def group = 11

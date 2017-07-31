@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Zirconium extends Atomic(40, 91.224) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Zirconium extends ChemicalElementBase(40, 91.224) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Zr"
   def category = Category.TransitionMetals
   def group = 4

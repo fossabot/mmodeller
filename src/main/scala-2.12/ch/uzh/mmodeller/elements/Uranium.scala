@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.GPa
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Uranium extends Atomic(92, 238.02891) with Positional with CrystalStructure with MagneticOrdering  {
+object Uranium extends ChemicalElementBase(92, 238.02891) with Positional with CrystalStructure with MagneticOrdering  {
   def symbol = "U"
   def category = Category.Actinoids
   def col = 4

@@ -8,7 +8,7 @@ import ch.uzh.utils.units.Chemical.mol
 import ch.uzh.utils.units.Volume.cm3
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Neptunium extends Atomic(93, 237.0) with Positional with CrystalStructure with MagneticOrdering  {
+object Neptunium extends ChemicalElementBase(93, 237.0) with Positional with CrystalStructure with MagneticOrdering  {
   def symbol = "Np"
   def category = Category.Actinoids
   def col = 5

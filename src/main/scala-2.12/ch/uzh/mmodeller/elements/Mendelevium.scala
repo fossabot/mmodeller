@@ -5,7 +5,7 @@ import ch.uzh.utils.units.Energy.kJ
 import ch.uzh.utils.units.Temperature.K
 import ch.uzh.utils.units.Chemical.mol
 
-object Mendelevium extends Atomic(101, 258.0) with Positional with MagneticOrdering  {
+object Mendelevium extends ChemicalElementBase(101, 258.0) with Positional with MagneticOrdering  {
   def symbol = "Md"
   def category = Category.Actinoids
   def col = 13

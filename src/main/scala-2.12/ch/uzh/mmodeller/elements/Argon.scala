@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{MPa, kPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Argon extends Atomic(18, 39.948) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Argon extends ChemicalElementBase(18, 39.948) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Ar"
   def category = Category.NobleGases
   def group = 18

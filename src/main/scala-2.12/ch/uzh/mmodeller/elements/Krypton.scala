@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{MPa, kPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Krypton extends Atomic(36, 83.798) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Krypton extends ChemicalElementBase(36, 83.798) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Kr"
   def category = Category.NobleGases
   def group = 18

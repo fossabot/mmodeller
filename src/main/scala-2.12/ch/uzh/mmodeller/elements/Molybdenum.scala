@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Molybdenum extends Atomic(42, 95.96) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Molybdenum extends ChemicalElementBase(42, 95.96) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Mo"
   def category = Category.TransitionMetals
   def group = 6

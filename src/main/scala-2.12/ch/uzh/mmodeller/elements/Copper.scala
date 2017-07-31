@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Copper extends Atomic(29, 63.546) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Copper extends ChemicalElementBase(29, 63.546) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Cu"
   def category = Category.TransitionMetals
   def group = 11

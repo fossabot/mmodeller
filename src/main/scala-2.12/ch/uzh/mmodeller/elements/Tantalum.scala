@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Tantalum extends Atomic(73, 180.9488) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Tantalum extends ChemicalElementBase(73, 180.9488) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
 def symbol = "Ta"
   def category = Category.TransitionMetals
   def group = 5

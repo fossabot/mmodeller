@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Gadolinium extends Atomic(64, 157.25) with Positional with CrystalStructure with MagneticOrdering  {
+object Gadolinium extends ChemicalElementBase(64, 157.25) with Positional with CrystalStructure with MagneticOrdering  {
   def symbol = "Gd"
   def category = Category.Lanthanoids
   def col = 8

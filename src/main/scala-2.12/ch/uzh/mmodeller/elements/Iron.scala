@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Iron extends Atomic(26, 55.845) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Iron extends ChemicalElementBase(26, 55.845) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Fe"
   def category = Category.TransitionMetals
   def group = 8

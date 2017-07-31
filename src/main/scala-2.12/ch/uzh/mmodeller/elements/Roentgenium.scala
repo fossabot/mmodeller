@@ -2,7 +2,7 @@ package ch.uzh.mmodeller.elements
 
 import ch.uzh.mmodeller.Materials.{Category, MaterialState}
 
-object Roentgenium extends Atomic(111, 280.0) with ChemicalGroup {
+object Roentgenium extends ChemicalElementBase(111, 280.0) with ChemicalGroup {
   def symbol = "Rg"
   def category = Category.TransitionMetals
   def group = 11

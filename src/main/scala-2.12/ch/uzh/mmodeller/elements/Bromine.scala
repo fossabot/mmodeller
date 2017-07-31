@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.MPa
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Bromine extends Atomic(35, 79.904) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Bromine extends ChemicalElementBase(35, 79.904) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Br"
   def category = Category.Halogens
   def group = 17

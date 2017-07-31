@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Rhodium extends Atomic(45, 102.90550) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Rhodium extends ChemicalElementBase(45, 102.90550) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Rh"
   def category = Category.TransitionMetals
   def group = 9

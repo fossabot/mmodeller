@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa, kPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Neon extends Atomic(10, 20.1797) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Neon extends ChemicalElementBase(10, 20.1797) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Ne"
   def category = Category.NobleGases
   def group = 18

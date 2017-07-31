@@ -2,7 +2,7 @@ package ch.uzh.mmodeller.elements
 
 import ch.uzh.mmodeller.Materials.{Category, MaterialState}
 
-object Hassium extends Atomic(108, 270.0) with ChemicalGroup {
+object Hassium extends ChemicalElementBase(108, 270.0) with ChemicalGroup {
   def symbol = "Hs"
   def category = Category.TransitionMetals
   def group = 8

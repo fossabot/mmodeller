@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Niobium extends Atomic(41, 92.90638) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Niobium extends ChemicalElementBase(41, 92.90638) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Nb"
   def category = Category.TransitionMetals
   def group = 5

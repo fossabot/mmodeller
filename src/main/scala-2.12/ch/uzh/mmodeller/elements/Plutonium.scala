@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.GPa
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Plutonium extends Atomic(94, 244.0) with Positional with CrystalStructure with MagneticOrdering  {
+object Plutonium extends ChemicalElementBase(94, 244.0) with Positional with CrystalStructure with MagneticOrdering  {
   def symbol = "Pu"
   def category = Category.Actinoids
   def col = 6

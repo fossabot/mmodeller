@@ -7,7 +7,7 @@ import ch.uzh.utils.units.Mass.g
 import ch.uzh.utils.units.Temperature.K
 import ch.uzh.utils.units.Volume.cm3
 
-object Einsteinium extends Atomic(99, 252.0) with Positional with MagneticOrdering  {
+object Einsteinium extends ChemicalElementBase(99, 252.0) with Positional with MagneticOrdering  {
   def symbol = "Es"
   def category = Category.Actinoids
   def col = 11

@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Magnesium extends Atomic(12, 24.3050) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Magnesium extends ChemicalElementBase(12, 24.3050) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Mg"
   def category = Category.AlkalineEarthMetals
   def group = 2

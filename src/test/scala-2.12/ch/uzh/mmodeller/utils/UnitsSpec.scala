@@ -66,6 +66,12 @@ class UnitsSpec extends FlatSpec with Matchers {
     toCelsius(K(273.15)) should be (0)
   }
 
+  "A quantity" should "be comparable" in {
+    K(0) should be < K(1)
+    K(14.01) should be > K(8.01)
+    K(100) should be (K(100))
+  }
+
   "Distance" should "be computable from velocity in time" in {
     val v = new Velocity(10)
     val t = min(3)

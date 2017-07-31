@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.GPa
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Barium extends Atomic(56, 137.327) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Barium extends ChemicalElementBase(56, 137.327) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Ba"
   def category = Category.AlkalineEarthMetals
   def group = 2

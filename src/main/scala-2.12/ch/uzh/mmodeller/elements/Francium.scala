@@ -8,7 +8,7 @@ import ch.uzh.utils.units.Volume.cm3
 import ch.uzh.utils.units.Length.m
 import ch.uzh.utils.units.Temperature.K
 
-object Francium extends Atomic(87, 223.0) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Francium extends ChemicalElementBase(87, 223.0) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Fr"
   def category = Category.AlkaliMetals
   def group = 1

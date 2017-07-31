@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Antimony extends Atomic(51, 121.760) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Antimony extends ChemicalElementBase(51, 121.760) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Sb"
   def category = Category.Metalloids
   def group = 15

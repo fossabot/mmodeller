@@ -10,7 +10,7 @@ import ch.uzh.utils.units.Time.s
 import ch.uzh.utils.units.Pressure.{GPa, MPa}
 import ch.uzh.utils.units.Temperature.{K, fromCelsius}
 
-object Titanium extends Atomic(22, 47.867) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
+object Titanium extends ChemicalElementBase(22, 47.867) with ChemicalGroup with CrystalStructure with MagneticOrdering  {
   def symbol = "Ti"
   def category = Category.TransitionMetals
   def group = 4

@@ -2,7 +2,7 @@ package ch.uzh.mmodeller.elements
 
 import ch.uzh.mmodeller.Materials.{Category, MaterialState}
 
-object Ununquadium extends Atomic(114, 289.0) with ChemicalGroup {
+object Ununquadium extends ChemicalElementBase(114, 289.0) with ChemicalGroup {
   def symbol = "Uuq"
   def category = Category.PostTransitionMetals
   def group = 14
