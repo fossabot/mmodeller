@@ -1,6 +1,6 @@
 package io.witlox.mmodeller.elements
 
-import io.witlox.mmodeller.Materials.MaterialState.MaterialState
+import io.witlox.mmodeller.MaterialState.MaterialState
 import io.witlox.mmodeller.utils.Units.{Ar, Density, ElectricResistivity, Energy, Length, MolarEnergy, MolarHeatCapacity, Pressure}
 import io.witlox.mmodeller.utils.Units.{Temperature, ThermalConductivity, ThermalExpansion, Velocity}
 

@@ -1,6 +1,6 @@
 package io.witlox.mmodeller.elements
 
-import io.witlox.mmodeller.Materials.{Category, MaterialState}
+import io.witlox.mmodeller.{Category, MaterialState}
 
 object Meitnerium extends ChemicalElementBase(109, 276.0) with ChemicalGroup {
   def symbol = "Mt"

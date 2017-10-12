@@ -1,6 +1,6 @@
 package io.witlox.mmodeller.elements
 
-import io.witlox.mmodeller.Materials.{Category, MaterialState}
+import io.witlox.mmodeller.{Category, MaterialState}
 
 object Copernicium extends ChemicalElementBase(112, 285.0) with ChemicalGroup {
   def symbol = "Cn"

@@ -9,7 +9,7 @@ case class Compound(composite: String, space: Space) {
   require(elements.length > 1, "Compound must contain 2 or more atoms")
 
   def oxidationState: Int = {
-
+    0
   }
 
   def elements: List[Molecule] = {

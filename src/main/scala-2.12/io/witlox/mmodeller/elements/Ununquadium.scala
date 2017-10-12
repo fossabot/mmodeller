@@ -1,6 +1,6 @@
 package io.witlox.mmodeller.elements
 
-import io.witlox.mmodeller.Materials.{Category, MaterialState}
+import io.witlox.mmodeller.{Category, MaterialState}
 
 object Ununquadium extends ChemicalElementBase(114, 289.0) with ChemicalGroup {
   def symbol = "Uuq"

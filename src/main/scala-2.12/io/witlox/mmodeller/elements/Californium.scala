@@ -1,6 +1,6 @@
 package io.witlox.mmodeller.elements
 
-import io.witlox.mmodeller.Materials.{Category, MaterialState}
+import io.witlox.mmodeller.{Category, MaterialState}
 import io.witlox.mmodeller.utils.units.Chemical.mol
 import io.witlox.mmodeller.utils.units.Energy.kJ
 import io.witlox.mmodeller.utils.units.Mass.g

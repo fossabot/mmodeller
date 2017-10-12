@@ -1,6 +1,6 @@
 package io.witlox.mmodeller.elements
 
-import io.witlox.mmodeller.Materials.{Category, MaterialState}
+import io.witlox.mmodeller.{Category, MaterialState}
 
 object Roentgenium extends ChemicalElementBase(111, 280.0) with ChemicalGroup {
   def symbol = "Rg"

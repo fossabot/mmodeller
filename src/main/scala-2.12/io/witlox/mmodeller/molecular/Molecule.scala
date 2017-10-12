@@ -1,7 +1,8 @@
 package io.witlox.mmodeller.molecular
 
-import io.witlox.mmodeller.Materials.MaterialState
-import io.witlox.mmodeller.Materials.MaterialState.MaterialState
+import io.witlox.mmodeller.MaterialState
+import io.witlox.mmodeller.MaterialState
+import io.witlox.mmodeller.MaterialState.MaterialState
 import io.witlox.mmodeller.dynamics.Space
 import io.witlox.mmodeller.elements.ChemicalElementBase
 import io.witlox.mmodeller.utils.Units.{Pressure, Temperature}

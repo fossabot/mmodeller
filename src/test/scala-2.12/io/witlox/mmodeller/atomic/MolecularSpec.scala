@@ -1,6 +1,6 @@
 package io.witlox.mmodeller.atomic
 
-import io.witlox.mmodeller.Materials.MaterialState
+import io.witlox.mmodeller.MaterialState
 import io.witlox.mmodeller.dynamics.Space
 import io.witlox.mmodeller.elements.Hydrogen
 import io.witlox.mmodeller.molecular.Molecule

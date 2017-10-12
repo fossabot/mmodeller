@@ -1,7 +1,7 @@
 package io.witlox.mmodeller.elements
 
-import io.witlox.mmodeller.Materials.Category.Category
-import io.witlox.mmodeller.Materials.MaterialState.MaterialState
+import io.witlox.mmodeller.Category.Category
+import io.witlox.mmodeller.MaterialState.MaterialState
 import io.witlox.mmodeller.utils.Units.{/, Ar, Area, MolarEnergy, Pressure, Temperature, Time}
 
 object Symbols {

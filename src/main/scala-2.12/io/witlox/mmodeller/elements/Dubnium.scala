@@ -1,6 +1,6 @@
 package io.witlox.mmodeller.elements
 
-import io.witlox.mmodeller.Materials.{Category, MaterialState}
+import io.witlox.mmodeller.{Category, MaterialState}
 
 object Dubnium extends ChemicalElementBase(105, 268.0) with ChemicalGroup {
   def symbol = "Db"

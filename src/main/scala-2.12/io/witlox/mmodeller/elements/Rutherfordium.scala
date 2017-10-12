@@ -1,6 +1,6 @@
 package io.witlox.mmodeller.elements
 
-import io.witlox.mmodeller.Materials.{Category, MaterialState}
+import io.witlox.mmodeller.{Category, MaterialState}
 
 object Rutherfordium extends ChemicalElementBase(104, 267.0) with ChemicalGroup {
   def symbol = "Rf"
